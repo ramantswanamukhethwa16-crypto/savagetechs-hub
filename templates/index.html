@@ -1,78 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>SAVAGETECHS HUB</title>
-
-<style>
-body {
-    background:#0b0014;
-    color:white;
-    font-family:Arial;
-    text-align:center;
-}
-
-.card {
-    background:#1a0033;
-    margin:20px;
-    padding:20px;
-    border-radius:15px;
-}
-
-button {
-    background:#7b00ff;
-    color:white;
-    border:none;
-    padding:15px;
-    border-radius:10px;
-}
-</style>
-
+    <meta charset="UTF-8">
+    <title>Home - SAVAGE TECH'S HUB</title>
+    <style>
+        body { background-color: #0b0714; color: #fff; font-family: sans-serif; margin: 0; padding-bottom: 70px; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; border-bottom: 1px solid #1a102f; background: #120924; }
+        .header-title { color: #d8b4fe; font-size: 14px; font-weight: bold; }
+        .msg-btn { background: none; border: none; font-size: 22px; cursor: pointer; color: #9d4edd; }
+        .container { padding: 20px; }
+        
+        /* Fullscreen Community Overlay */
+        #communityOverlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0b0714; z-index: 1000; flex-direction: column; }
+        .community-header { background: #1a102f; padding: 15px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #7b2cbf; }
+        .close-community { background: #7b2cbf; color: white; border: none; padding: 5px 12px; border-radius: 5px; cursor: pointer; }
+        .chat-body { flex: 1; padding: 15px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; }
+        .chat-footer { padding: 15px; background: #120924; display: flex; gap: 10px; }
+        .chat-footer input { flex: 1; padding: 10px; background: #0b0714; border: 1px solid #9d4edd; color: white; border-radius: 6px; }
+        .chat-footer button { padding: 10px 15px; background: #9d4edd; border: none; color: white; border-radius: 6px; font-weight: bold; cursor: pointer; }
+        
+        .contact-box { background: #1a102f; padding: 15px; border-radius: 10px; border: 1px solid #7b2cbf; margin-bottom: 15px; }
+        .contact-box a { color: #c084fc; text-decoration: none; display: block; margin: 5px 0; }
+        
+        .nav-bar { position: fixed; bottom: 0; width: 100%; background: #120924; display: flex; justify-content: space-around; padding: 12px 0; border-top: 1px solid #241442; z-index: 100; }
+        .nav-item { color: #9d4edd; text-decoration: none; font-size: 12px; }
+    </style>
 </head>
-
 <body>
+    <header>
+        <div class="header-title">SAVAGE TECH'S HUB</div>
+        <button class="msg-btn" onclick="openCommunity()">💬</button>
+    </header>
 
-<h1>💜 SAVAGETECHS HUB</h1>
-<p>VPN Config Community Platform</p>
+    <div class="container">
+        <h2>Welcome to Home Dashboard</h2>
+        <div class="contact-box">
+            <h3>Direct Contact & Communities</h3>
+            <p><strong>Phone:</strong> 0734548144</p>
+            <a href="https://chat.whatsapp.com/Dwo9fLMp6024VJJFTrvFR9?s=cl&p=a&ilr=4" target="_blank">🔗 Join WhatsApp Group</a>
+            <a href="https://whatsapp.com/channel/0029VbE5WU6HFxP9MwedVO05" target="_blank">🔗 Join WhatsApp Channel</a>
+        </div>
+    </div>
 
-<div class="card">
-<h2>📥 Latest Configs</h2>
-<p>No configs uploaded yet</p>
-<button>Browse Configs</button>
-</div>
+    <!-- Fullscreen Community Overlay Modal -->
+    <div id="communityOverlay">
+        <div class="community-header">
+            <h3>Savage Community Chat</h3>
+            <button class="close-community" onclick="closeCommunity()">X</button>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <div style="background: #1a102f; padding: 10px; border-radius: 8px; max-width: 80%;"><strong>Admin:</strong> Welcome everyone to the community room! Plan your tasks here.</div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chatInput" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
 
-<div class="card">
-<h2>📤 Upload Config</h2>
-<p>Share your VPN files with the community</p>
-<button>Upload</button>
-</div>
+    <div class="nav-bar">
+        <a href="/home" class="nav-item" style="color: #fff;">Home</a>
+        <a href="/search" class="nav-item">Search</a>
+        <a href="/files" class="nav-item">Files</a>
+        <a href="/leaderboard" class="nav-item">Leaderboard</a>
+        <a href="/profile" class="nav-item">Profile</a>
+        <a href="/settings" class="nav-item">Settings</a>
+    </div>
 
-<div class="card">
-<h2>💬 WhatsApp Community</h2>
-<button>Join Channel</button>
-<button>Join Group</button>
-</div>
-<button>Upload</button><div class="card">
-
-<h2>📤 Upload Config</h2>
-
-<p>Share your VPN files with the community</p>
-
-<form action="/upload" method="POST" enctype="multipart/form-data">
-
-<input type="text" name="name" placeholder="Config name" required>
-
-<br><br>
-
-<input type="file" name="file" required>
-
-<br><br>
-
-<button type="submit">
-Upload
-</button>
-
-</form>
-
-</div>
+    <script>
+        function openCommunity() {
+            document.getElementById('communityOverlay').style.display = 'flex';
+        }
+        function closeCommunity() {
+            document.getElementById('communityOverlay').style.display = 'none';
+        }
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            if(input.value.trim() !== '') {
+                const chatBody = document.getElementById('chatBody');
+                const msg = document.createElement('div');
+                msg.style.background = '#3b0764';
+                msg.style.padding = '10px';
+                msg.style.borderRadius = '8px';
+                msg.style.alignSelf = 'flex-end';
+                msg.style.maxWidth = '80%';
+                msg.innerText = input.value;
+                chatBody.appendChild(msg);
+                input.value = '';
+                chatBody.scrollTop = chatBody.scrollHeight;
+            }
+        }
+    </script>
 </body>
 </html>
+
