@@ -214,7 +214,18 @@
 
 
         const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
+        const auth = getAuth(app);const provider = new GoogleAuthProvider();
+
+document.getElementById('googleLoginBtn').addEventListener('click', async () => {
+    try {
+        await signInWithPopup(auth, provider);
+        window.location.href = '/home';
+    } catch (error) {
+        console.error("Google Sign-In Error:", error);
+        alert("Google Sign-In failed: " + error.message);
+    }
+});
+
         const googleProvider = new GoogleAuthProvider();
 
         let isSignUp = false;
