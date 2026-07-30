@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Search - SAVAGE TECH'S HUB</title>
+    <style>
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        body {
+            background-color: #0b0714;
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding-bottom: 70px;
+        }
+        header {
+            background: #120924;
+            padding: 15px 20px;
+            border-bottom: 1px solid #1a102f;
+            font-weight: bold;
+            color: #d8b4fe;
+            text-align: center;
+            font-size: 14px;
+        }
+        .container { padding: 15px; }
+        .search-box {
+            width: 100%;
+            padding: 12px 15px;
+            background: #120924;
+            border: 1px solid #7b2cbf;
+            color: white;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+        }
+        .search-box::placeholder { color: #9ca3af; }
+        .tag-row {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+        .tag-pill {
+            background: #1a102f;
+            border: 1px solid #4c1d95;
+            color: #d8b4fe;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+        .section-title {
+            font-size: 13px;
+            color: #c084fc;
+            margin: 20px 0 10px 0;
+        }
+        .result-card {
+            background: #1a102f;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid #7b2cbf;
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: #e9d5ff;
+        }
+        .nav-bar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: #120924;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-top: 1px solid #241442;
+            z-index: 100;
+        }
+        .nav-item {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 11px;
+            text-align: center;
+        }
+        .nav-item.active {
+            color: #a855f7;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>SEARCH PAGE</header>
+    
+    <div class="container">
+        <input type="text" class="search-box" placeholder="Search configs, files, users...">
+        
+        <div class="tag-row">
+            <span class="tag-pill">All</span>
+            <span class="tag-pill">Configs</span>
+            <span class="tag-pill">Websites</span>
+            <span class="tag-pill">Scripts</span>
+        </div>
+
+        <div class="section-title">Recent Searches</div>
+        <div class="result-card">FreeFire Bundle</div>
+        <div class="result-card">BlackModVd_(No-ads)</div>
+        <div class="result-card">ShadowConfig_v2-main.ovpn</div>
+
+        <div class="section-title">Suggested Tags</div>
+        <div class="result-card">#gameplay</div>
+        <div class="result-card">#vip_configs</div>
+        <div class="result-card">#premium</div>
+    </div>
+
+    <div class="nav-bar">
+        <a href="/home" class="nav-item">🏠<br>Home</a>
+        <a href="/search" class="nav-item active">🔍<br>Search</a>
+        <a href="/files" class="nav-item">📁<br>Files</a>
+        <a href="/leaderboard" class="nav-item">🏆<br>Leaderboard</a>
+        <a href="/profile" class="nav-item">👤<br>Profile</a>
+    </div>
+</body>
+</html>
+

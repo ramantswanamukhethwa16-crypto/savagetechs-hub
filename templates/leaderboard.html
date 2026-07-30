@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Leaderboard - SAVAGE TECH'S HUB</title>
+    <style>
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        body {
+            background-color: #0b0714;
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding-bottom: 70px;
+        }
+        header {
+            background: #120924;
+            padding: 15px 20px;
+            border-bottom: 1px solid #1a102f;
+            font-weight: bold;
+            color: #d8b4fe;
+            text-align: center;
+            font-size: 14px;
+        }
+        .container { padding: 15px; }
+        .section-title {
+            font-size: 13px;
+            color: #c084fc;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .rank-item {
+            background: #1a102f;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid #4c1d95;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+        }
+        .nav-bar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: #120924;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-top: 1px solid #241442;
+            z-index: 100;
+        }
+        .nav-item {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 11px;
+            text-align: center;
+        }
+        .nav-item.active {
+            color: #a855f7;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>LEADERBOARD PAGE</header>
+    
+    <div class="container">
+        <div class="section-title">👑 Top Contributors ⭐</div>
+
+        <div class="rank-item">
+            <span>🏆 1. BlackArena</span>
+            <span style="color: #c084fc; font-weight: bold;">452</span>
+        </div>
+        <div class="rank-item">
+            <span>🥈 2. TechDev</span>
+            <span style="color: #c084fc; font-weight: bold;">399</span>
+        </div>
+        <div class="rank-item">
+            <span>🥉 3. Shadow</span>
+            <span style="color: #c084fc; font-weight: bold;">348</span>
+        </div>
+        <div class="rank-item">
+            <span>4. TechSam</span>
+            <span style="color: #c084fc; font-weight: bold;">327</span>
+        </div>
+        <div class="rank-item">
+            <span>5. BrubalVpn</span>
+            <span style="color: #c084fc; font-weight: bold;">298</span>
+        </div>
+        <div class="rank-item">
+            <span>6. AlphaVpn</span>
+            <span style="color: #c084fc; font-weight: bold;">165</span>
+        </div>
+        <div class="rank-item">
+            <span>7. ProXGemu</span>
+            <span style="color: #c084fc; font-weight: bold;">118</span>
+        </div>
+        <div class="rank-item">
+            <span>8. NovaAstra</span>
+            <span style="color: #c084fc; font-weight: bold;">95</span>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <a href="/home" class="nav-item">🏠<br>Home</a>
+        <a href="/search" class="nav-item">🔍<br>Search</a>
+        <a href="/files" class="nav-item">📁<br>Files</a>
+        <a href="/leaderboard" class="nav-item active">🏆<br>Leaderboard</a>
+        <a href="/profile" class="nav-item">👤<br>Profile</a>
+    </div>
+</body>
+</html>
+
