@@ -3,289 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAVAGE TECH'S HUB - VPN Files</title>
+    <title>SAVAGE TECH\x27S HUB - VPN Files</title>
     <style>
-        body {
-            background-color: #0f0a1a;
-            color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            padding-bottom: 75px;
-        }
-        header {
-            background: #1a102f;
-            padding: 12px 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #2d1b4e;
-        }
-        .header-left, .header-right {
-            display: flex;
-            align-items: center;
-        }
-        .header-title-container {
-            text-align: center;
-            flex-grow: 1;
-            padding: 0 10px;
-        }
-        .creator-name {
-            font-size: 0.75rem;
-            color: #b19cd9;
-            margin: 0;
-            font-weight: 500;
-        }
-        h2 {
-            margin: 0;
-            color: #d1b3ff;
-            font-size: 1.15rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
-        .icon-btn {
-            font-size: 1.1rem;
-            cursor: pointer;
-            background: #2b1d4a;
-            padding: 8px;
-            border-radius: 50%;
-            border: 1px solid #3d2868;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 36px;
-            height: 36px;
-        }
-        .container {
-            padding: 15px;
-        }
-        .upload-banner {
-            background: linear-gradient(135deg, #4a2882, #2b1650);
-            border: 1px solid #6b3fa0;
-            border-radius: 14px;
-            padding: 20px;
-            text-align: center;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
-        }
-        .upload-banner h3 {
-            margin: 0 0 8px 0;
-            font-size: 1.15rem;
-            color: #ffffff;
-        }
-        .upload-banner p {
-            margin: 0 0 15px 0;
-            font-size: 0.85rem;
-            color: #d1b3ff;
-        }
-        .upload-btn-main {
-            background: #8a2be2;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 0.95rem;
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-        }
-        /* Trending VPN Files Block */
-        .trending-title {
-            font-size: 1.05rem;
-            font-weight: bold;
-            color: #ffffff;
-            margin-bottom: 12px;
-            border-left: 4px solid #8a2be2;
-            padding-left: 8px;
-            letter-spacing: 0.3px;
-        }
-        .vpn-block {
-            background: #1e1435;
-            border: 1px solid #332255;
-            border-radius: 14px;
-            padding: 25px 15px;
-            text-align: center;
-        }
-        .no-uploads {
-            color: #8c7aa9;
-            font-size: 0.9rem;
-            margin: 0;
-        }
-        /* Community Chat Modal Styling */
-        #chatModal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #0f0a1a;
-            z-index: 1000;
-            flex-direction: column;
-        }
-        .chat-header {
-            background: #1a102f;
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #2d1b4e;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-        .chat-messages {
-            flex: 1;
-            padding: 15px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .chat-msg {
-            background: #1e1435;
-            padding: 10px 14px;
-            border-radius: 10px;
-            max-width: 80%;
-            border: 1px solid #332255;
-            font-size: 0.9rem;
-        }
-        .chat-input-area {
-            background: #140d22;
-            padding: 12px;
-            display: flex;
-            gap: 8px;
-            border-top: 1px solid #2d1b4e;
-            align-items: center;
-        }
-        .chat-input-area input {
-            flex: 1;
-            background: #1e1435;
-            border: 1px solid #332255;
-            padding: 10px;
-            border-radius: 8px;
-            color: white;
-            font-size: 0.9rem;
-        }
-        .chat-btn {
-            background: #8a2be2;
-            color: white;
-            border: none;
-            padding: 10px 14px;
-            border-radius: 8px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        /* Bottom Navbar */
-        .navbar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: #140d22;
-            display: flex;
-            justify-content: space-around;
-            padding: 10px 0;
-            border-top: 1px solid #2d1b4e;
-            z-index: 999;
-        }
-        .nav-item {
-            color: #8c7aa9;
-            text-decoration: none;
-            font-size: 0.75rem;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .nav-item.active {
-            color: #b19cd9;
-        }
+        body { background-color: #0f0a1a; color: #ffffff; font-family: \x27Segoe UI\x27, Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; padding-bottom: 75px; }
+        header { background: #1a102f; padding: 12px 15px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #2d1b4e; }
+        .header-left, .header-right { display: flex; align-items: center; }
+        .header-title-container { text-align: center; flex-grow: 1; padding: 0 10px; }
+        .creator-name { font-size: 0.75rem; color: #b19cd9; margin: 0; font-weight: 500; }
+        h2 { margin: 0; color: #d1b3ff; font-size: 1.15rem; font-weight: 700; letter-spacing: 0.5px; }
+        .icon-btn { font-size: 1.1rem; cursor: pointer; background: #2b1d4a; padding: 8px; border-radius: 50%; border: 1px solid #3d2868; color: #ffffff; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; }
+        .container { padding: 15px; }
+        .upload-banner { background: linear-gradient(135deg, #4a2882, #2b1650); border: 1px solid #6b3fa0; border-radius: 14px; padding: 20px; text-align: center; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3); }
+        .upload-banner h3 { margin: 0 0 8px 0; font-size: 1.15rem; color: #ffffff; }
+        .upload-banner p { margin: 0 0 15px 0; font-size: 0.85rem; color: #d1b3ff; }
+        .upload-btn-main { background: #8a2be2; color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; font-size: 0.95rem; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+        .trending-title { font-size: 1.05rem; font-weight: bold; color: #ffffff; margin-bottom: 12px; border-left: 4px solid #8a2be2; padding-left: 8px; letter-spacing: 0.3px; }
+        .vpn-block { background: #1e1435; border: 1px solid #332255; border-radius: 14px; padding: 25px 15px; text-align: center; }
+        .no-uploads { color: #8c7aa9; font-size: 0.9rem; margin: 0; }
+        #chatModal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0f0a1a; z-index: 1000; flex-direction: column; }
+        .chat-header { background: #1a102f; padding: 15px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #2d1b4e; font-weight: bold; font-size: 1.1rem; }
+        .chat-messages { flex: 1; padding: 15px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; }
+        .chat-msg { background: #1e1435; padding: 10px 14px; border-radius: 10px; max-width: 80%; border: 1px solid #332255; font-size: 0.9rem; }
+        .chat-input-area { background: #140d22; padding: 12px; display: flex; gap: 8px; border-top: 1px solid #2d1b4e; align-items: center; }
+        .chat-input-area input { flex: 1; background: #1e1435; border: 1px solid #332255; padding: 10px; border-radius: 8px; color: white; font-size: 0.9rem; }
+        .chat-btn { background: #8a2be2; color: white; border: none; padding: 10px 14px; border-radius: 8px; font-weight: bold; cursor: pointer; }
+        .navbar { position: fixed; bottom: 0; left: 0; width: 100%; background: #140d22; display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #2d1b4e; z-index: 999; }
+        .nav-item { color: #8c7aa9; text-decoration: none; font-size: 0.75rem; text-align: center; display: flex; flex-direction: column; align-items: center; }
+        .nav-item.active { color: #b19cd9; }
     </style>
 </head>
 <body>
-
     <header>
-        <!-- Top Left Notification Icon -->
-        <div class="header-left">
-            <div class="icon-btn" onclick="alert('No new notifications')">🔔</div>
-        </div>
-
-        <!-- Center App Title & Creator Name -->
+        <div class="header-left"><div class="icon-btn" onclick="alert(\x27No new notifications\x27)">🔔</div></div>
         <div class="header-title-container">
             <p class="creator-name">R. Műkhɛthwa</p>
-            <h2>SAVAGE TECH'S HUB</h2>
+            <h2>SAVAGE TECH\x27S HUB</h2>
         </div>
-
-        <!-- Top Right Community Chat Icon -->
-        <div class="header-right">
-            <div class="icon-btn" onclick="openChat()">💬</div>
-        </div>
+        <div class="header-right"><div class="icon-btn" onclick="openChat()">💬</div></div>
     </header>
-
     <div class="container">
         <div class="upload-banner">
             <h3>Share Your VPN Configs</h3>
             <p>Upload your .hc, .ehi, or .trz files for the community</p>
-            <button class="upload-btn-main" onclick="alert('Select a VPN file from your device to upload!')">📁 Upload VPN File</button>
+            <button class="upload-btn-main" onclick="alert(\x27Select a VPN file from your device to upload!\x27)">📁 Upload VPN File</button>
         </div>
-
-        <!-- Bold Trending VPN Files Block -->
         <div class="trending-title">Trending VPN Files</div>
-        <div class="vpn-block">
-            <p class="no-uploads">📁 No uploads yet</p>
-        </div>
+        <div class="vpn-block"><p class="no-uploads">📁 No uploads yet</p></div>
     </div>
-
-    <!-- Community Chat Modal -->
     <div id="chatModal">
         <div class="chat-header">
             <span>💬 Community Chat & Media</span>
             <span onclick="closeChat()" style="cursor:pointer; font-size: 1.2rem; padding: 0 8px;">✕</span>
         </div>
         <div class="chat-messages" id="chatMessages">
-            <div class="chat-msg"><strong>System:</strong> Welcome to Savage Tech's Hub Community! Chat, share twerk videos, or send voice notes below.</div>
+            <div class="chat-msg"><strong>System:</strong> Welcome to Savage Tech\x27s Hub Community! Chat, share twerk videos, or send voice notes below.</div>
         </div>
         <div class="chat-input-area">
             <input type="text" id="chatInput" placeholder="Type a message or share link...">
             <button class="chat-btn" onclick="sendMsg()">Send</button>
-            <button class="chat-btn" style="background:#5a189a;" onclick="alert('Voice note recording activated!')">🎤</button>
-            <button class="chat-btn" style="background:#3c096c;" onclick="alert('Video / Twerks media upload activated!')">📹</button>
+            <button class="chat-btn" style="background:#5a189a;" onclick="alert(\x27Voice note recording activated!\x27)">🎤</button>
+            <button class="chat-btn" style="background:#3c096c;" onclick="alert(\x27Video / Twerks media upload activated!\x27)">📹</button>
         </div>
     </div>
-
-    <!-- Bottom Navigation Bar -->
     <div class="navbar">
         <a href="/home" class="nav-item active">🏠 Home</a>
-        <a href="#" class="nav-item" onclick="alert('Search feature coming soon!')">🔍 Search</a>
-        <a href="#" class="nav-item" onclick="alert('Files feature coming soon!')">📁 Files</a>
-        <a href="#" class="nav-item" onclick="alert('Leaderboard coming soon!')">🏆 Leaderboard</a>
-        <a href="#" class="nav-item" onclick="alert('Profile settings coming soon!')">👤 Profile</a>
-        <a href="#" class="nav-item" onclick="alert('Settings coming soon!')">⚙️ Settings</a>
+        <a href="#" class="nav-item" onclick="alert(\x27Search feature coming soon!\x27)">🔍 Search</a>
+        <a href="#" class="nav-item" onclick="alert(\x27Files feature coming soon!\x27)">📁 Files</a>
+        <a href="#" class="nav-item" onclick="alert(\x27Leaderboard coming soon!\x27)">🏆 Leaderboard</a>
+        <a href="#" class="nav-item" onclick="alert(\x27Profile settings coming soon!\x27)">👤 Profile</a>
+        <a href="#" class="nav-item" onclick="alert(\x27Settings coming soon!\x27)">⚙️ Settings</a>
     </div>
-
     <script>
-        function openChat() {
-            document.getElementById('chatModal').style.display = 'flex';
-        }
-        function closeChat() {
-            document.getElementById('chatModal').style.display = 'none';
-        }
+        function openChat() { document.getElementById(\x27chatModal\x27).style.display = \x27flex\x27; }
+        function closeChat() { document.getElementById(\x27chatModal\x27).style.display = \x27none\x27; }
         function sendMsg() {
-            const input = document.getElementById('chatInput');
+            const input = document.getElementById(\x27chatInput\x27);
             if(!input.value.trim()) return;
-            const msgs = document.getElementById('chatMessages');
-            const div = document.createElement('div');
-            div.className = 'chat-msg';
-            div.style.alignSelf = 'flex-end';
-            div.style.background = '#3c096c';
+            const msgs = document.getElementById(\x27chatMessages\x27);
+            const div = document.createElement(\x27div\x27);
+            div.className = \x27chat-msg\x27;
+            div.style.alignSelf = \x27flex-end\x27;
+            div.style.background = \x27#3c096c\x27;
             div.innerHTML = `<strong>You:</strong> ${input.value}`;
             msgs.appendChild(div);
-            input.value = '';
+            input.value = \x27\x27;
             msgs.scrollTop = msgs.scrollHeight;
         }
     </script>
-
 </body>
 </html>
-
