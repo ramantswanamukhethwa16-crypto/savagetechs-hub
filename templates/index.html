@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SAVAGETECHS HUB</title>
+
+<style>
+body {
+    background:#0b0014;
+    color:white;
+    font-family:Arial;
+    text-align:center;
+}
+
+.card {
+    background:#1a0033;
+    margin:20px;
+    padding:20px;
+    border-radius:15px;
+}
+
+button {
+    background:#7b00ff;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>💜 SAVAGETECHS HUB</h1>
+<p>VPN Config Community Platform</p>
+
+<div class="card">
+<h2>📥 Latest Configs</h2>
+<p>No configs uploaded yet</p>
+<button>Browse Configs</button>
+</div>
+
+<div class="card">
+<h2>📤 Upload Config</h2>
+<p>Share your VPN files with the community</p>
+<button>Upload</button>
+</div>
+
+<div class="card">
+<h2>💬 WhatsApp Community</h2>
+<button>Join Channel</button>
+<button>Join Group</button>
+</div>
+<button>Upload</button><div class="card">
+
+<h2>📤 Upload Config</h2>
+
+<p>Share your VPN files with the community</p>
+
+<form action="/upload" method="POST" enctype="multipart/form-data">
+
+<input type="text" name="name" placeholder="Config name" required>
+
+<br><br>
+
+<input type="file" name="file" required>
+
+<br><br>
+
+<button type="submit">
+Upload
+</button>
+
+</form>
+
+</div>
+</body>
+</html>
