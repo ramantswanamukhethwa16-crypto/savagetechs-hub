@@ -90,13 +90,15 @@
             cursor: pointer;
             box-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
-        .section-title {
+        /* Trending VPN Files Block */
+        .trending-title {
             font-size: 1.05rem;
             font-weight: bold;
+            color: #ffffff;
             margin-bottom: 12px;
-            color: #b19cd9;
             border-left: 4px solid #8a2be2;
             padding-left: 8px;
+            letter-spacing: 0.3px;
         }
         .vpn-block {
             background: #1e1435;
@@ -204,13 +206,18 @@
 <body>
 
     <header>
+        <!-- Top Left Notification Icon -->
         <div class="header-left">
             <div class="icon-btn" onclick="alert('No new notifications')">🔔</div>
         </div>
+
+        <!-- Center App Title & Creator Name -->
         <div class="header-title-container">
             <p class="creator-name">R. Műkhɛthwa</p>
-            <h2>🌸SAVAGE TECH'S HUB🌸</h2>
+            <h2>SAVAGE TECH'S HUB</h2>
         </div>
+
+        <!-- Top Right Community Chat Icon -->
         <div class="header-right">
             <div class="icon-btn" onclick="openChat()">💬</div>
         </div>
@@ -223,7 +230,8 @@
             <button class="upload-btn-main" onclick="alert('Select a VPN file from your device to upload!')">📁 Upload VPN File</button>
         </div>
 
-        <div class="section-title">Trending VPN Files</div>
+        <!-- Bold Trending VPN Files Block -->
+        <div class="trending-title">Trending VPN Files</div>
         <div class="vpn-block">
             <p class="no-uploads">📁 No uploads yet</p>
         </div>
